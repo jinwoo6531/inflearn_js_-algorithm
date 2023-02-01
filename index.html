@@ -1,0 +1,49 @@
+<!-- 1번 최소값 -->
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        // return Math.min(a, b, c);
+        let answer;
+        if (a > b) answer = b;
+        else answer = a;
+        if (answer > c) answer = c;
+
+        return answer;
+
+
+        혹은 Math.min(a,b,c) 로 한번에 풀 수 있다.
+      }
+
+      console.log(solution(6, 5, 11));
+    </script>
+  </body>
+</html> -->
+
+<!-- 2번 삼격형 판별하기 -->
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      // 가장 큰 값max보다 두개의 합이 커야한다.
+      function solution(a, b, c) {
+        let answer = Math.max(a, b, c);
+        let sum = a + b + c;
+        let 답;
+        if (sum - max > max) 답 = 'yes';
+        else 답 = 'NO';
+
+        return 답;
+      }
+
+      console.log(solution(13, 33, 17));
+    </script>
+  </body>
+</html> -->
