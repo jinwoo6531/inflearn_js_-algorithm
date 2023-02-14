@@ -214,7 +214,7 @@
 </html> -->
 
 <!-- 가운데 문자 출력 -->
-<html>
+<!-- <html>
   <head>
     <meta charset="UTF-8" />
     <title>출력결과</title>
@@ -230,6 +230,26 @@
       }
 
       console.log(solution('good'));
+    </script>
+  </body>
+</html> -->
+
+<!-- SECTION1 문제풀이 완료 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer1 = str.split('');
+        let answer2 = [...new Set(answer1)];
+
+        return answer2.join('');
+      }
+
+      console.log(solution('ksekkeset'));
     </script>
   </body>
 </html>
