@@ -27,6 +27,69 @@
 </html> -->
 
 <!-- 보이는 학생 -->
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      //   function solution(arr) {
+      //     let answer = 1,
+      //       max = arr[0];
+
+      //     for (let i = 1; i < arr.length; i++) {
+      //       if (arr[i] > max) {
+      //         answer++;
+      //         max = arr[i];
+      //       }
+      //     }
+      //     return answer;
+      //   }
+      function solution(arr) {
+        let max = 0;
+        let count = 0;
+
+        arr.reduce((prev, curr) => {
+          if (curr > prev) {
+            max = curr;
+            count++;
+          }
+
+          return max;
+        }, 0);
+
+        return count;
+      }
+
+      console.log(solution([130, 135, 148, 140, 145, 150, 150, 153]));
+    </script>
+  </body>
+</html> -->
+
+<!-- 가위바위보 -->
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(N, A, B) {
+        const results = ['D', 'A', 'B'];
+        for (let i = 0; i < N; i++) {
+          const winner = (A[i] - B[i] + 3) % 3; //2-1+3 /3 = 1;
+          console.log(results[winner]);
+        }
+      }
+
+      let a = [2, 3, 3, 1, 3];
+      let b = [1, 1, 2, 2, 3];
+      console.log(solution(5, a, b));
+    </script>
+  </body>
+</html> -->
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -35,19 +98,20 @@
   <body>
     <script>
       function solution(arr) {
-        let answer = 1,
-          max = arr[0];
-
-        for (let i = 1; i < arr.length; i++) {
-          if (arr[i] > max) {
-            answer++;
-            max = arr[i];
-          }
+        let answer = 0,
+          cnt = 0;
+        for (let x of arr) {
+          if (x === 1) {
+            cnt++;
+            answer += cnt;
+          } else cnt = 0;
         }
+
         return answer;
       }
 
-      console.log(solution([130, 135, 148, 140, 145, 150, 150, 153]));
+      let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+      console.log(solution(arr));
     </script>
   </body>
 </html>
