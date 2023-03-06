@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = '';
+        str = str.toLowerCase();
+        if (str.toLowerCase().split('').reverse().join('') !== str) {
+          return (answer = 'NO');
+        } else {
+          return (answer = 'YES');
+        }
+      }
+
+      console.log(solution('gooG'));
+    </script>
+  </body>
+</html>

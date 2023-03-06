@@ -91,6 +91,26 @@
 </html> -->
 
 <!-- 등수구하기 -->
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let sorted = [...arr].sort((a, b) => b - a); //[100, 92, 89, 87, 76]
+        let ranks = sorted.map((score) => arr.indexOf(score) + 1);
+
+        return ranks;
+      }
+
+      let arr = [87, 89, 92, 100, 76];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html> -->
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -99,8 +119,10 @@
   <body>
     <script>
       function solution(arr) {
-        let sortedNewArray = [...arr].sort((a, b) => b - a);
-        let rank = sortedNewArray.map((score) => arr.indexOf(score + 1));
+        let sorted = [...arr].sort((a, b) => b - a); //[100, 92, 89, 87, 76]
+        let ranks = sorted.map((score) => arr.indexOf(score) + 1);
+
+        return ranks;
       }
 
       let arr = [87, 89, 92, 100, 76];
