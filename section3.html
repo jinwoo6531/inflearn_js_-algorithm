@@ -1,4 +1,5 @@
-<html>
+<!-- 회문문자열
+  <html>
   <head>
     <meta charset="UTF-8" />
     <title>출력결과</title>
@@ -16,6 +17,27 @@
       }
 
       console.log(solution('gooG'));
+    </script>
+  </body>
+</html> -->
+
+<!-- 정규식을 이용한 문자열만 읽기 -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = 'YES';
+        s = s.toLowerCase().replace(/[^a-z]/g, '');
+        if (s.split('').reverse().join('') !== s) return 'NO';
+        return answer;
+      }
+
+      let str = 'found7, time: study; Yduts; emit, 7Dnuof';
+      console.log(solution(str));
     </script>
   </body>
 </html>
